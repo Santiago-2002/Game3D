@@ -13,6 +13,9 @@ public class MovementInput : MonoBehaviour {
 
 	public float InputX;
 	public float InputZ;
+	//public float JumpForce = 1.0f;
+	//private Rigidbody Physics;
+
 	public Vector3 desiredMoveDirection;
 	public bool blockRotationPlayer;
 	public float desiredRotationSpeed = 0.1f;
@@ -41,6 +44,10 @@ public class MovementInput : MonoBehaviour {
 		anim = this.GetComponent<Animator> ();
 		cam = Camera.main;
 		controller = this.GetComponent<CharacterController> ();
+
+		//Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+
 	}
 	
 	// Update is called once per frame
@@ -60,7 +67,10 @@ public class MovementInput : MonoBehaviour {
         controller.Move(moveVector);
 
 
+
     }
+
+	
 
     void PlayerMoveAndRotation() {
 		InputX = Input.GetAxis ("Horizontal");
