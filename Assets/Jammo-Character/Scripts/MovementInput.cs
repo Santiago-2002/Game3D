@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,9 +12,6 @@ public class MovementInput : MonoBehaviour {
 
 	public float InputX;
 	public float InputZ;
-	//public float JumpForce = 1.0f;
-	//private Rigidbody Physics;
-
 	public Vector3 desiredMoveDirection;
 	public bool blockRotationPlayer;
 	public float desiredRotationSpeed = 0.1f;
